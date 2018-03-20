@@ -39,6 +39,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersForm));
             this.userBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -57,10 +58,9 @@
             this.userPasswordTextBox = new System.Windows.Forms.TextBox();
             this.userPhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.FindByEmailGroupBox = new System.Windows.Forms.GroupBox();
+            this.FindByEmailTextBox = new System.Windows.Forms.TextBox();
             this.FindByEmailButton = new System.Windows.Forms.Button();
             this.BrowseAllButton = new System.Windows.Forms.Button();
-            this.FindByEmailTextBox = new System.Windows.Forms.TextBox();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             userEmailLabel = new System.Windows.Forms.Label();
             userFirstNameLabel = new System.Windows.Forms.Label();
             userIdLabel = new System.Windows.Forms.Label();
@@ -70,8 +70,8 @@
             FindByEmailLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingNavigator)).BeginInit();
             this.userBindingNavigator.SuspendLayout();
-            this.FindByEmailGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            this.FindByEmailGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // userEmailLabel
@@ -175,6 +175,10 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(LoginApplication.User);
             // 
             // bindingNavigatorCountItem
             // 
@@ -336,6 +340,14 @@
             this.FindByEmailGroupBox.TabStop = false;
             this.FindByEmailGroupBox.Text = " Find an User by Email ";
             // 
+            // FindByEmailTextBox
+            // 
+            this.FindByEmailTextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindByEmailTextBox.Location = new System.Drawing.Point(69, 35);
+            this.FindByEmailTextBox.Name = "FindByEmailTextBox";
+            this.FindByEmailTextBox.Size = new System.Drawing.Size(339, 30);
+            this.FindByEmailTextBox.TabIndex = 8;
+            // 
             // FindByEmailButton
             // 
             this.FindByEmailButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,7 +355,7 @@
             this.FindByEmailButton.Location = new System.Drawing.Point(20, 76);
             this.FindByEmailButton.Name = "FindByEmailButton";
             this.FindByEmailButton.Size = new System.Drawing.Size(388, 33);
-            this.FindByEmailButton.TabIndex = 8;
+            this.FindByEmailButton.TabIndex = 9;
             this.FindByEmailButton.Text = "Find";
             this.FindByEmailButton.UseVisualStyleBackColor = true;
             this.FindByEmailButton.Click += new System.EventHandler(this.FindByEmailButton_Click);
@@ -356,22 +368,10 @@
             this.BrowseAllButton.Location = new System.Drawing.Point(0, 449);
             this.BrowseAllButton.Name = "BrowseAllButton";
             this.BrowseAllButton.Size = new System.Drawing.Size(452, 35);
-            this.BrowseAllButton.TabIndex = 14;
+            this.BrowseAllButton.TabIndex = 7;
             this.BrowseAllButton.Text = "Browse All Entities";
             this.BrowseAllButton.UseVisualStyleBackColor = true;
             this.BrowseAllButton.Click += new System.EventHandler(this.BrowseAllButton_Click);
-            // 
-            // FindByEmailTextBox
-            // 
-            this.FindByEmailTextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FindByEmailTextBox.Location = new System.Drawing.Point(69, 35);
-            this.FindByEmailTextBox.Name = "FindByEmailTextBox";
-            this.FindByEmailTextBox.Size = new System.Drawing.Size(339, 30);
-            this.FindByEmailTextBox.TabIndex = 15;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(LoginApplication.User);
             // 
             // UsersForm
             // 
@@ -405,9 +405,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.userBindingNavigator)).EndInit();
             this.userBindingNavigator.ResumeLayout(false);
             this.userBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.FindByEmailGroupBox.ResumeLayout(false);
             this.FindByEmailGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
