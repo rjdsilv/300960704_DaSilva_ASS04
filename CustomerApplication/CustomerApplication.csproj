@@ -136,7 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerAddress.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CustomerAddressModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -149,7 +149,7 @@
       <LastGenOutput>CustomerAddressModel.cs</LastGenOutput>
     </Content>
     <Content Include="CustomerAddress_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>CustomerAddress.mdf</DependentUpon>
     </Content>
     <Content Include="Database\Scripts\CustomerAddress.sql" />
