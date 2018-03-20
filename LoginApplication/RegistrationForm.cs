@@ -44,12 +44,12 @@ namespace LoginApplication
 
         private bool ValidateForm(out decimal parsedPhoneNumber)
         {
-            return ValidationUtils.ValidatePhoneNumber(PhoneNumberTextBox.Text, out parsedPhoneNumber) && 
-                ValidationUtils.ValidateFirstName(FirstNameTextBox.Text) &&
-                ValidationUtils.ValidateLastName(LastNameTextBox.Text) &&
-                ValidationUtils.ValidateUserName(EmailTextBox.Text) &&
-                ValidationUtils.ValidatePassword(PasswordTextBox.Text) &&
-                ValidationUtils.ValidateValidUserName(EmailTextBox.Text);
+            return ValidationUtils.ValidatePhoneNumber(PhoneNumberTextBox.Text, out parsedPhoneNumber, true) && 
+                ValidationUtils.ValidateFirstName(FirstNameTextBox.Text, true) &&
+                ValidationUtils.ValidateLastName(LastNameTextBox.Text, true) &&
+                ValidationUtils.ValidateUserName(EmailTextBox.Text, true) &&
+                ValidationUtils.ValidatePassword(PasswordTextBox.Text, true) &&
+                ValidationUtils.ValidateValidUserName(EmailTextBox.Text, true);
         }
     }
 }

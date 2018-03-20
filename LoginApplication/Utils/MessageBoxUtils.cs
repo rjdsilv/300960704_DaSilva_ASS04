@@ -14,6 +14,11 @@ namespace LoginApplication.Utils
             return MessageBox.Show(message, "Login Application", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public static DialogResult ShowYesNoQuestion(string message)
+        {
+            return MessageBox.Show(message, "Login Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
         public static DialogResult ShowError(string message)
         {
             return MessageBox.Show(message, "Login Application", MessageBoxButtons.OK, MessageBoxIcon.Error);

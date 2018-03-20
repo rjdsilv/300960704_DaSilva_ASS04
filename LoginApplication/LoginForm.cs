@@ -36,8 +36,8 @@ namespace LoginApplication
                     else
                     {
                         Hide();
-                        //UsersForm usersForm = new UsersForm();
-                        //usersForm.ShowDialog();
+                        UsersForm usersForm = new UsersForm();
+                        usersForm.Show();
                     }
                 }
             }
@@ -45,8 +45,8 @@ namespace LoginApplication
 
         private bool ValidateForm()
         {
-            return ValidationUtils.ValidateUserName(UserNameTextBox.Text) &&
-                ValidationUtils.ValidatePassword(PasswordTextBox.Text);
+            return ValidationUtils.ValidateUserName(UserNameTextBox.Text, true) &&
+                ValidationUtils.ValidatePassword(PasswordTextBox.Text, true);
         }
     }
 }
